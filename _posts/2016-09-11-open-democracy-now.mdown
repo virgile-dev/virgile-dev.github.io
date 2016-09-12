@@ -2,7 +2,7 @@
 layout: default
 modal-id: 2
 date: 2016-01-22
-img: odn.png
+img: ODN.png
 alt: "Open Democracy Now"
 project-date: January 2016
 categories: project

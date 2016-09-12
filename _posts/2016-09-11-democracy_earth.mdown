@@ -3,7 +3,7 @@
 layout: default
 modal-id: 4
 date: 2015-04-07
-img: dearth.png
+img: Dearth.png
 alt: "Democracy Earth"
 project-date: April 2016
 categories: project

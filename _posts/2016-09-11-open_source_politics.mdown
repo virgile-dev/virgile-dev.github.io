@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2016-05-20
-img: osp.png
+img: OSP.png
 alt: "Open Source Politics"
 project-date: May 2016
 categories: project
