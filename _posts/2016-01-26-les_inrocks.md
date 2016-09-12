@@ -1,6 +1,6 @@
 ---
 layout: default
-img: makery.png
+img:
 alt: "Les inRocks"
 categories: media
 link: "https://codepen.io/dodozhang21/pen/qNEKNy"

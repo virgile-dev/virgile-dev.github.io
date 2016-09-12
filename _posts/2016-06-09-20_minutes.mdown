@@ -1,6 +1,6 @@
 ---
 layout: default
-img: 20minutes.png
+img:
 alt: 20 minutes
 date: 2016-06-09
 title: "Ils ont moins de 30 ans et tentent de réinventer la politique"
