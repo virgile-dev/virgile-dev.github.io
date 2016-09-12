@@ -1,0 +1,10 @@
+---
+layout: default
+img: 
+alt: "Lyon Mag"
+date: 2016-03-16
+title: "Un Lyonnais invente la démocratie 2.0"
+categories: media
+link: "https://www.lyonmag.com/article/79196/un-lyonnais-invente-la-democratie-2-0"
+
+---

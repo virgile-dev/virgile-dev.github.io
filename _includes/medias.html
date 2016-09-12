@@ -1,0 +1,27 @@
+ <!-- Medias Section -->
+    <section class="success" id="medias">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>In the media</h2>
+                    <hr class="news-light">
+                </div>
+            </div>
+            <div class="row container">
+                {% for post in site.categories.media %}
+                    <!-- <div class=".col-md-3 .col-md-offset-3">
+                        <a>
+                            <img src="img/medias/{{ post.img }}">
+                        </a>
+                    </div> -->
+                    <div class="col-sm-9 col-sm-offset-2" >
+                            <blockquote>
+                                <a href="{{ post.link }}"><h4><span style="color:#fff;">{{ post.title }}</span></h4></a>
+                                <small><span style="color:#fff">{{ post.alt }}</span></small>
+                            </blockquote>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>

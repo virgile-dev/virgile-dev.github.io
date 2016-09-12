@@ -1,0 +1,10 @@
+---
+layout: default
+img: 
+alt: "Le Monde"
+date: 2016-03-16
+title: "« Civic Tech » : des applis pour doper la démocratie en ville"
+categories: media
+link: "http://www.lemonde.fr/smart-cities/article/2016/07/14/civic-tech-des-applis-pour-doper-la-democratie-participative_4969481_4811534.html#qIhckjK6cXvo3lSU.99"
+
+---

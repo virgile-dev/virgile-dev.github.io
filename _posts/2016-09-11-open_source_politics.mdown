@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 1
+date: 2016-05-20
+img: osp.png
+alt: "Open Source Politics"
+project-date: May 2016
+categories: project
+website: "opensourcepolitics.eu"
+location: Paris, France
+title: Open Source Politics
+description: <a href="http://opensourcepolitics.eu/">Open Source Politics</a> is a company whose purpose is to bring the best open source solutions to organization that choose democracy has their operating system. We provide our client with customized software development, platform maintenance and strategies on how to make their public participate on online.  
+
+---

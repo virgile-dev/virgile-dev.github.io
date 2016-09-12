@@ -1,0 +1,10 @@
+---
+layout: default
+img: 20minutes.png
+alt: 20 minutes
+date: 2016-06-09
+title: "Ils ont moins de 30 ans et tentent de réinventer la politique"
+categories: media
+link: "http://www.20minutes.fr/politique/1856079-20160609-moijeune-moins-30-ans-tentent-reinventer-politique"
+
+---
