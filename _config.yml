@@ -56,7 +56,7 @@ address:
   - line: Paris 18, France 
 
 # Credits content
-credits: 'Created using <i>Freelancer</i> a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>. See my fork on <a href="https://github.com/virgile-dev/virgile-dev.github.io">Github</a>'
+credits: 'Powered by <a href="https://jekyllrb.com/">Jekyll</a>. Created using <i>Freelancer</i> a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>. See my fork on <a href="https://github.com/virgile-dev/virgile-dev.github.io">Github</a>'
 
 # Build settings
 markdown: kramdown
