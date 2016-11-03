@@ -4,7 +4,7 @@ email: virgile.deville@gmail.com
 url: https://example.github.io
 description: "Virgile Deville, Civic Tech Entrepreneur,Product Manager, Blockchain enthousiast, Conference Speaker & Open Source Community Builder and Animator"
 meta_author: Virgile Deville
-skills: "Civic Tech Entrepreneur, Product Manager, Conference Speaker & Open Source Community Builder and Animator"
+skills: "Civic Tech Entrepreneur, Product Manager, Conference Speaker & Open Source Community Builder"
 gems: [jekyll-admin]
 # Google webmaster tools
 google_verify:
