@@ -1,0 +1,9 @@
+---
+layout: default
+img: 
+alt: "Le Monde"
+date: 2016-10-25
+title: "« Civic Tech » : vers une boîte à outils de la démocratie numérique" 
+link: "http://www.lemonde.fr/pixels/article/2016/10/25/civic-tech-vers-une-boite-a-outils-de-la-democratie-numerique_5019800_4408996.html"
+
+---
