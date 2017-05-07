@@ -1,0 +1,10 @@
+---
+layout: default
+img:
+alt: "Le Monde"
+categories: media
+link: "http://www.lemonde.fr/smart-cities/article/2017/04/28/six-outils-pour-developper-la-participation-citoyenne-a-l-echelle-locale_5119425_4811534.html"
+title: "Participation citoyenne : six initiatives pour « gouverner la ville autrement"
+date: 2017-05-03
+
+---

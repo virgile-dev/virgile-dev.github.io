@@ -5,7 +5,7 @@ url: https://example.github.io
 description: "Virgile Deville, Civic Tech Entrepreneur,Product Manager, Blockchain enthousiast, Conference Speaker & Open Source Community Builder and Animator"
 meta_author: Virgile Deville
 skills: "Civic Tech Entrepreneur, Product Manager, Conference Speaker & Open Source Community Builder"
-gems: [jekyll-admin]
+gems:
 # Google webmaster tools
 google_verify:
 
@@ -53,7 +53,7 @@ social:
 # Postal address (add as many lines as necessary)
 address:
   - line: Rue Myrha
-  - line: Paris 18, France 
+  - line: Paris 18, France
 
 # Credits content
 credits: 'Powered by <a href="https://jekyllrb.com/">Jekyll</a>. Created using <i>Freelancer</i> a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>. See my fork on <a href="https://github.com/virgile-dev/virgile-dev.github.io">Github</a>'
