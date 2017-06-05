@@ -9,6 +9,7 @@ categories: project
 website: "opensourcepolitics.eu"
 location: Paris, France
 title: Open Source Politics
-description: Open Source Politics is a solidarity economy company that builds < a href="http://www.opensourcepolitics.eu">civic tech</a> <a href="http://www.opensourcepolitics.eu">open source tools</a> in order to improve <a href="http://www.opensourcepolitics.eu">citizen participation</a>. We provide technical and methodological support to both public and private stakeholders willing to engage in offline or online participation processes. We work on different types of projects: <a href="http://www.opensourcepolitics.eu/consultations-publiques"> public consultation</a>, <a href="http://www.opensourcepolitics.eu/budget-participatif">participatory budgeting</a>, <a href="http://www.opensourcepolitics.eu/consultations-publiques">collaborative decision-making</a>, etc.  
+description:
 
 ---
+Open Source Politics is a solidarity economy company that builds <a href="http://www.opensourcepolitics.eu">civic tech</a> <a href="http://www.opensourcepolitics.eu">open source tools</a> in order to improve <a href="http://www.opensourcepolitics.eu">citizen participation</a>. We provide technical and methodological support to both public and private stakeholders willing to engage in offline or online participation processes. We work on different types of projects: <a href="http://www.opensourcepolitics.eu/consultations-publiques"> public consultation</a>, <a href="http://www.opensourcepolitics.eu/budget-participatif">participatory budgeting</a>, <a href="http://www.opensourcepolitics.eu/consultations-publiques">collaborative decision-making</a>, etc.  

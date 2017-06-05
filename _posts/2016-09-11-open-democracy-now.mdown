@@ -9,6 +9,7 @@ categories: project
 website: "opendemocracynow.net"
 location: Paris, France
 title: Open Democracy Now
-description: <a href="opendemocracynow.net/">Open Democracy Now</a> is a series of hackathon of which I am a co-organizer with several other people from different initiative and the French government. Those hackathons consist in a periodic gathering of the French civic tech community in which we work on a variety of open government subjects like open data, transparency, accessibility etc. which we try to adress by creating or improving open source projects. As of now we hosted 4 hackathons and gathered more than 20 projects and 200 recurrent participants.
+description:
 
 ---
+<a href="opendemocracynow.net/">Open Democracy Now</a> is a series of hackathon of which I am a co-organizer with several other people from different initiative and the French government. Those hackathons consist in a periodic gathering of the French civic tech community in which we work on a variety of open government subjects like open data, transparency, accessibility etc. which we try to adress by creating or improving open source projects. As of now we hosted 4 hackathons and gathered more than 20 projects and 200 recurrent participants.

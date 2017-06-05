@@ -10,5 +10,6 @@ categories: project
 website: "democracyos.eu"
 location: Earth
 title: Democracy Earth
-description: <a href="http://democracy.earth">Democracy Earth</a> is an NGO based in San Francisco, California that aims at to bring incoruptible governance systems for large and small communities. By working around the concept of liquid democracy also known as delegative democracy and leveraging on new internet protocols like the blockchain; we plan to bring politics to the 21st century means by working on 3 components of Democracy. Identity, Legitimacy and Representation.
+description:
 ---
+<a href="http://democracy.earth">Democracy Earth</a> is an NGO based in San Francisco, California that aims at to bring incoruptible governance systems for large and small communities. By working around the concept of liquid democracy also known as delegative democracy and leveraging on new internet protocols like the blockchain; we plan to bring politics to the 21st century means by working on 3 components of Democracy. Identity, Legitimacy and Representation.

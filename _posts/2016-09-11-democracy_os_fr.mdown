@@ -10,7 +10,8 @@ categories: project
 website: "democracyos.eu"
 location: Paris, France
 title: DemocracyOS France
-description: <a href="http://democracyos.eu">DemocracyOS France</a> is a french NGO that promotes in France the open source software for collective decision making, DemocracyOS. Our mission is to adapt the existing to software to french local needs and help communities take a shot at more open and collaborative governance system. Our association is 15+ members large, we've undertaken big project with big cities like Paris and Nanterre. Part of our activities involve advocacy to impose open source software in public civic tech application to bring the transparency imperative to the technical level.
+description:
 
 ---
 
+<a href="http://democracyos.eu">DemocracyOS France</a> is a french NGO that promotes in France the open source software for collective decision making, DemocracyOS. Our mission is to adapt the existing to software to french local needs and help communities take a shot at more open and collaborative governance system. Our association is 15+ members large, we've undertaken big project with big cities like Paris and Nanterre. Part of our activities involve advocacy to impose open source software in public civic tech application to bring the transparency imperative to the technical level.
