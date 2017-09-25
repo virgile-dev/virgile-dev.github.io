@@ -1,0 +1,52 @@
+a {
+  color: #0A5892;
+}
+
+.title-bar {
+  background: #0A5892;
+}
+
+.button {
+  background: #0A5892;
+}
+
+.button.hollow.secondary {
+  color: #D31F2E;
+}
+
+.section-heading:before {
+  background: #0A5892;
+}
+
+.button.hollow, .button.hollow:hover, .button.hollow:focus {
+  background: #0A5892;
+}
+
+
+.home-bullet__icon svg {
+  background: #0A5892;
+}
+
+.subhero-cta {
+  color: #0A5892;
+}
+
+.process-header__progress .phase-item--past::after {
+  color: #D31F2E;
+}
+
+.timeline__item--current .timeline__header {
+  color: #D31F2E;
+}
+
+.timeline__phase {
+  color: #D31F2E;
+}
+
+.process-nav__content is-active {
+  color: #D31F2E;
+}
+
+.process_stats-item {
+  color: #D31F2E;
+}
