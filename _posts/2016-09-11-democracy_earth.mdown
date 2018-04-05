@@ -7,7 +7,7 @@ img: Dearth.png
 alt: "Democracy Earth"
 project-date: April 2016
 categories: project
-website: "democracyos.eu"
+website: "democracy.earth"
 location: Earth
 title: Democracy Earth
 description:
