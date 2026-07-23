@@ -1,7 +1,7 @@
 export const site = {
   title: 'Virgile Deville',
   url: 'https://oss.pm',
-  description: 'Building digital commons & open source public infrastructure',
+  description: 'Open source software product manager — building digital commons & open source public infrastructure',
   metaAuthor: 'Virgile Deville',
   skills:
     'Civic Tech entrepreneur working on digital commons, open source software and public-interest technology, currently in the French govtech / beta.gouv.fr ecosystem. Co-founder of Open Source Politics, Democracy Earth & Open Democracy Now.',
