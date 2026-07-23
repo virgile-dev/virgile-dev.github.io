@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Header from '../components/Header.astro';
+import PortfolioGrid from '../components/PortfolioGrid.astro';
+import Interventions from '../components/Interventions.astro';
+import Medias from '../components/Medias.astro';
+import ContactStatic from '../components/ContactStatic.astro';
+import Footer from '../components/Footer.astro';
+import Modals from '../components/Modals.astro';
+---
+
+<Layout>
+  <Nav />
+  <Header />
+  <PortfolioGrid />
+  <Interventions />
+  <Medias />
+  <ContactStatic />
+  <Footer />
+  <Modals />
+
+  <!-- jQuery -->
+  <script is:inline src="/js/jquery-1.11.0.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script is:inline src="/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script is:inline src="/js/jquery.easing.min.js"></script>
+  <script is:inline src="/js/classie.js"></script>
+  <script is:inline src="/js/cbpAnimatedHeader.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script is:inline src="/js/jqBootstrapValidation.js"></script>
+  <script is:inline src="/js/contact_me_static.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script is:inline src="/js/freelancer.js"></script>
+</Layout>
