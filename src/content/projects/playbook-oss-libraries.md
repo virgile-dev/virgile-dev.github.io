@@ -8,7 +8,7 @@ website: "github.com/virgile-dev/playbook-work-with-oss-libraries"
 link: "https://github.com/virgile-dev/playbook-work-with-oss-libraries"
 location: "Paris, France"
 title: "Playbook: Working with OSS Libraries"
-description:
+description: "A playbook for responsible open source engagement: how teams and public administrations should evaluate, depend on, and sustain the libraries they rely on."
 ---
 
-A framework for responsible open source engagement — practical guidance for teams and public administrations on how to evaluate, depend on, contribute back to, and sustain the open source libraries they rely on, instead of treating them as free, zero-maintenance infrastructure.
+A framework for responsible open source engagement: practical guidance for teams and public administrations on how to evaluate, depend on, contribute back to, and sustain the open source libraries they rely on — instead of treating them as free, zero-maintenance infrastructure.
