@@ -1,10 +1,12 @@
 # Site settings
 title: Virgile Deville
 email: virgile.deville@gmail.com
-url: https://example.github.io
-description: "Figuring out democracy in the internet era"
+url: https://oss.pm
+description: "Building digital commons & open source public infrastructure"
 meta_author: Virgile Deville
-skills: "I am a Civic Tech Entrepreneur, Blockchain enthusiast, Product Manager, Conference Speaker & Open Source Community Builder"
+# Note: current employer/title is not asserted here as it could not be independently
+# verified from public sources at the time of writing (July 2026) — kept general on purpose.
+skills: "Civic Tech entrepreneur working on digital commons, open source software and public-interest technology, currently in the French govtech / beta.gouv.fr ecosystem. Co-founder of Open Source Politics, Democracy Earth & Open Democracy Now."
 gems:
 # Google webmaster tools
 google_verify:
@@ -24,10 +26,10 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  primary: 0f6f5c
+  primary-rgb: "15,111,92"
+  secondary: 1f2937
+  secondary-dark: 111827
 
 # Footer settings
 footer:
@@ -38,16 +40,16 @@ footer:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
+  - title: github
+    url: https://github.com/virgile-dev
+  - title: linkedin
+    url: https://www.linkedin.com/in/virgiledeville
   - title: twitter
-    url: http://twitter.com/virgiledeville
-  - title: facebook
-    url: http://facebook.com/virgile.devile
+    url: https://twitter.com/virgiledeville
   - title: medium
     url: https://medium.com/@virgiledeville
-  - title: github
-    url: http://github.com/virgile-dev
-  - title: linkedin
-    url: https://www.linkedin.com/in/virgiledeville?trk=hp-identity-photo
+  - title: facebook
+    url: https://facebook.com/virgile.devile
 
 
 # Postal address (add as many lines as necessary)

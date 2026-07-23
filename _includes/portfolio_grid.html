@@ -4,20 +4,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Projects</h2>
+                    <h2>Projects &amp; focus areas</h2>
                     <hr class="wrench-primary">
+                    <p class="section-subtitle">Current work in digital commons, open source, and public-interest technology.</p>
                 </div>
             </div>
             <div class="row">
                 {% for post in site.categories.project %}
-                    <div class="col-sm-4 portfolio-item">
+                    <div class="col-sm-6 col-md-4 portfolio-item">
                         <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
+                            <div class="portfolio-card">
+                                {% if post.img %}
+                                <div class="portfolio-card-media">
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
                                 </div>
+                                {% else %}
+                                <div class="portfolio-card-icon">
+                                    <i class="fa {{ post.icon | default: 'fa-code' }}" aria-hidden="true"></i>
+                                </div>
+                                {% endif %}
+                                <h4>{{ post.title }}</h4>
+                                <p class="portfolio-card-meta">{{ post.project-date }}</p>
+                                <span class="portfolio-card-more">Learn more <i class="fa fa-arrow-right"></i></span>
                             </div>
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
                         </a>
                     </div>
                 {% endfor %}
