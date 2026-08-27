@@ -1,112 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const coached = [
-  {
-    title: 'uMap',
-    url: 'https://umap-project.org/',
-    desc: 'Interactive map editor built on top of OpenStreetMap.',
-  },
-  {
-    title: 'OpenFoodFacts',
-    url: 'https://world.openfoodfacts.org/',
-    desc: 'Crowdsourced open dataset on consumer products, plus a scan app.',
-  },
-  {
-    title: 'PrimTux',
-    url: 'https://primtux.fr/',
-    desc: 'Linux distribution built for primary school students.',
-  },
-  {
-    title: 'Pyronear',
-    url: 'https://pyronear.org/en/',
-    desc: 'Lightweight computer-vision model for early wildfire detection.',
-  },
-];
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const dateFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 
-<Layout>
+<Layout description="Writing on open source product management and digital commons.">
   <div class="wrap">
     <nav class="topnav">
-      <a href="/blog/">Blog →</a>
+      <a href="/virgile-deville">About me →</a>
     </nav>
 
-    <header class="hero">
-      <img class="portrait" src="/img/portrait.gif" alt="Virgile Deville" />
-      <div>
-        <h1>Virgile Deville</h1>
-        <p class="title">Senior Product Manager — Open Source &amp; Digital Commons</p>
-      </div>
+    <header class="page-header">
+      <h1 class="oss-logo">OSS.PM</h1>
+      <p class="tagline">
+        Hey, I'm Virgile. I'm a Product Manager working on open source software, currently leading LaSuite Docs at DINUM, the French government's digital agency. This blog is where I write about running open source products, where the industry is headed, and what AI is doing to it — including how I'm using it myself.
+
+      </p>
     </header>
 
-    <section class="section bio">
-      <p>
-        I'm a product manager who builds open source collaboration software. Most of my work
-        sits at the intersection of civic tech, public infrastructure, and digital commons —
-        software built in the open, for the public good.
-      </p>
-    </section>
-
-    <section class="section">
-      <span class="section-label">Now</span>
-      <p class="now-title">LaSuite Docs</p>
-      <p>
-        My main focus these days is <a href="https://docs.la-suite.eu/">LaSuite Docs</a>, a
-        collaborative text editor and knowledge base I lead as an Entrepreneur of General
-        Interest (EIG) at <a href="https://www.numerique.gouv.fr/numerique-etat/dinum/"
-          >DINUM</a
-        >, the French government's digital agency. The idea: break content free from rigid
-        formatting and get it ready for the AI age — built entirely open source, for public
-        officials.
-      </p>
-      <p>
-        It hit #1 on <a href="https://news.ycombinator.com/item?id=43378239">Hacker News</a> in March 2025 (1,952 votes) and has since crossed 17k stars on <a href="https://github.com/suitenumerique/docs/">GitHub</a>.
-      </p>
-    </section>
-
-    <section class="section">
-      <span class="section-label">Teaching &amp; volunteering</span>
-      <p>
-        I teach "Introduction to Digital Commons and Public Policy" at{' '}
-        <a href="https://www.sciencespo.fr/en/">Sciences Po Paris</a>.
-      </p>
-      <p>
-        I also co-founded <a href="https://codefor.fr/">Code for France</a> and launched the{' '}
-        <a href="https://wemakecommons.org/">We Make Commons</a> campaign, both pushing open
-        source and digital commons further into public life.
-      </p>
-    </section>
-
-    <section class="section">
-      <span class="section-label">Past</span>
-      <p class="now-title">Open Source Politics</p>
-      <p>
-        I co-founded <a href="https://opensourcepolitics.eu/">Open Source Politics</a>, the
-        leading integrator of <a href="https://decidim.org/">Decidim</a>, an open-source civic
-        participation platform. It was sold to <a href="https://www.govocal.com/">GoVocal</a>,
-        the category's worldwide leader, in 2026.
-      </p>
-      <p class="now-title" style="margin-top: 1.5rem;">Product coaching</p>
-      <p>
-        Before LaSuite Docs, I spent 2 years as a Product Coach in DINUM's Open Source
-        Program Office (OSPO), helping steer the product and communities of:
-      </p>
-      <div class="card-list">
-        {
-          coached.map((p) => (
-            <a class="card" href={p.url} target="_blank" rel="noopener noreferrer">
-              <div class="card-title">{p.title}</div>
-              <p class="card-desc">{p.desc}</p>
-            </a>
-          ))
-        }
-      </div>
-    </section>
-
-    <footer>
-      <a href="/blog/">Blog</a>
-      <a href="https://github.com/virgile-dev">GitHub</a>
-      <a href="https://www.linkedin.com/in/virgiledeville">LinkedIn</a>
-    </footer>
+    <div class="card-list">
+      {
+        posts.map((post) => (
+          <a class="card" href={`/blog/${post.id}/`}>
+            <div class="card-title">{post.data.title}</div>
+            <p class="card-desc">{post.data.description}</p>
+            <time class="card-date" datetime={post.data.date.toISOString()}>
+              {dateFormat.format(post.data.date)}
+            </time>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </Layout>

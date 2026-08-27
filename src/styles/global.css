@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
   /* Palette pulled from Virgile's neon line-art portrait */
@@ -16,6 +16,7 @@
   --accent-dim: #7a5225;
 
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-sans: 'Ubuntu', ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -34,6 +35,10 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-family: var(--font-sans);
 }
 
 a {
@@ -75,6 +80,36 @@ a:hover {
   margin: 0 0 0.5rem;
   font-size: 1.4rem;
   color: var(--text);
+}
+
+.oss-logo {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, var(--orange), var(--cyan), var(--green), var(--orange));
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: oss-logo-shift 6s linear infinite;
+}
+
+@keyframes oss-logo-shift {
+  to {
+    background-position: 300% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oss-logo {
+    animation: none;
+  }
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
 }
 
 .hero {
