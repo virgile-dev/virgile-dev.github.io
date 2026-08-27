@@ -1,13 +1,15 @@
 ---
-import '../styles/main.css';
-import { site } from '../site.config';
+import '../styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
-const pageTitle = title ?? site.title;
+const {
+  title = 'Virgile Deville',
+  description = 'Senior Product Manager specialized in open source collaboration software.',
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -15,39 +17,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>{pageTitle}</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-
-    <link rel="icon" type="image/svg+xml" href="/css/font-awesome/hand-peace-o.svg" />
-    <meta name="description" content={site.description} />
-    <meta name="author" content={site.metaAuthor} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-
-    <!-- Bootswatch Flatly theme: http://bootswatch.com/flatly/ -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <script
-      is:inline
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#000000" />
   </head>
-  <body id="page-top" class="index">
+  <body>
     <slot />
   </body>
 </html>

@@ -1,6 +1,0 @@
----
-alt: "Challenges"
-date: 2016-05-24
-title: "Comment les civic-tech veulent réinventer la démocratie en France"
-link: "http://www.challenges.fr/challenges-soir/20160524.CHA9603/comment-les-civic-tech-veulent-reinventer-la-democratie-en-france.html"
----

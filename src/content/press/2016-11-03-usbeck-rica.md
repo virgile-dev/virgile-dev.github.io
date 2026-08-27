@@ -1,6 +1,0 @@
----
-alt: "Usbeck & Ricka"
-date: 2016-10-25
-title: "Et si on liquidait les partis politiques ?"
-link: "https://m.usbeketrica.com/article/et-si-on-liquidait-les-partis-politiques"
----
