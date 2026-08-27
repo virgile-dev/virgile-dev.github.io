@@ -1,8 +1,8 @@
-_site
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
 
 .DS_Store
-
-img/.DS_Store
