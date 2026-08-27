@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const dateFormat = new Intl.DateTimeFormat('en', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+
+<Layout title={`${post.data.title} — Virgile Deville`} description={post.data.description}>
+  <div class="wrap">
+    <nav class="topnav">
+      <a href="/blog/">← Blog</a>
+    </nav>
+
+    <header class="page-header">
+      <h1>{post.data.title}</h1>
+      <time class="card-date" datetime={post.data.date.toISOString()}>
+        {dateFormat.format(post.data.date)}
+      </time>
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Layout>
