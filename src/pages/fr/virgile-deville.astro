@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LangSwitch from '../../components/LangSwitch.astro';
+
+const coached = [
+  {
+    title: 'uMap',
+    url: 'https://umap-project.org/',
+    desc: 'Éditeur de cartes interactives construit sur OpenStreetMap.',
+  },
+  {
+    title: 'OpenFoodFacts',
+    url: 'https://fr.openfoodfacts.org/',
+    desc: 'Base de données ouverte et collaborative sur les produits alimentaires, avec une appli de scan.',
+  },
+  {
+    title: 'PrimTux',
+    url: 'https://primtux.fr/',
+    desc: "Distribution Linux conçue pour les élèves de l'école primaire.",
+  },
+  {
+    title: 'Pyronear',
+    url: 'https://pyronear.org/',
+    desc: 'Modèle de vision par ordinateur léger pour la détection précoce des feux de forêt.',
+  },
+];
+
+const alternates = { en: '/virgile-deville', fr: '/fr/virgile-deville' };
+---
+
+<Layout lang="fr" alternates={alternates}>
+  <div class="wrap">
+    <nav class="topnav">
+      <a href="/fr/">Blog →</a>
+      <LangSwitch lang="fr" targets={alternates} />
+    </nav>
+
+    <header class="hero">
+      <img class="portrait" src="/img/portrait.gif" alt="Virgile Deville" />
+      <div>
+        <h1>Virgile Deville</h1>
+        <p class="title">Senior Product Manager — Open source &amp; communs numériques</p>
+      </div>
+    </header>
+
+    <section class="section bio">
+      <p>
+        Je suis product manager et je construis des logiciels libres de collaboration. L'essentiel
+        de mon travail se situe au croisement de la civic tech, des infrastructures publiques et des
+        communs numériques — des logiciels construits en ouvert, au service de l'intérêt général.
+      </p>
+    </section>
+
+    <section class="section">
+      <span class="section-label">En ce moment</span>
+      <p class="now-title">LaSuite Docs</p>
+      <p>
+        Je me consacre principalement à <a href="https://docs.la-suite.eu/">LaSuite Docs</a>, un
+        éditeur de texte collaboratif et une base de connaissances que je pilote en tant
+        qu'Entrepreneur d'Intérêt Général (EIG) à la <a
+          href="https://www.numerique.gouv.fr/numerique-etat/dinum/">DINUM</a
+        >, la direction interministérielle du numérique. L'idée : libérer le contenu des mises en
+        forme rigides et le préparer à l'ère de l'IA — entièrement en open source, pour les agents
+        publics.
+      </p>
+      <p>
+        Le projet est arrivé n°1 sur <a href="https://news.ycombinator.com/item?id=43378239">Hacker News</a> en mars 2025 (1 952 votes) et a depuis dépassé les 17 000 étoiles sur <a href="https://github.com/suitenumerique/docs/">GitHub</a>.
+      </p>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Enseignement &amp; bénévolat</span>
+      <p>
+        J'enseigne « Introduction aux communs numériques et aux politiques publiques » à{' '}
+        <a href="https://www.sciencespo.fr/">Sciences Po Paris</a>.
+      </p>
+      <p>
+        J'ai aussi cofondé <a href="https://codefor.fr/">Code for France</a> et lancé la campagne{' '}
+        <a href="https://wemakecommons.org/">We Make Commons</a>, deux initiatives qui font avancer
+        l'open source et les communs numériques dans la vie publique.
+      </p>
+    </section>
+
+    <section class="section">
+      <span class="section-label">Avant</span>
+      <p class="now-title">Open Source Politics</p>
+      <p>
+        J'ai cofondé <a href="https://opensourcepolitics.eu/">Open Source Politics</a>, le
+        principal intégrateur de <a href="https://decidim.org/">Decidim</a>, une plateforme open
+        source de participation citoyenne. L'entreprise a été rachetée en 2026 par <a
+          href="https://www.govocal.com/">GoVocal</a
+        >, le leader mondial du secteur.
+      </p>
+      <p class="now-title" style="margin-top: 1.5rem;">Coaching produit</p>
+      <p>
+        Avant LaSuite Docs, j'ai passé 2 ans comme coach produit au sein de l'Open Source Program
+        Office (OSPO) de la DINUM, à accompagner le produit et les communautés de :
+      </p>
+      <div class="card-list">
+        {
+          coached.map((p) => (
+            <a class="card" href={p.url} target="_blank" rel="noopener noreferrer">
+              <div class="card-title">{p.title}</div>
+              <p class="card-desc">{p.desc}</p>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <footer>
+      <a href="/fr/">Blog</a>
+      <a href="https://github.com/virgile-dev">GitHub</a>
+      <a href="https://www.linkedin.com/in/virgiledeville">LinkedIn</a>
+    </footer>
+  </div>
+</Layout>

@@ -1,12 +1,12 @@
 ---
-import BlogPost from '../../components/BlogPost.astro';
+import BlogPost from '../../../components/BlogPost.astro';
 import { getCollection } from 'astro:content';
-import { postLang, postSlug, findTranslation } from '../../i18n/ui';
+import { postLang, postSlug, findTranslation } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts
-    .filter((post) => postLang(post) === 'en')
+    .filter((post) => postLang(post) === 'fr')
     .map((post) => ({
       params: { slug: postSlug(post) },
       props: { post, translation: findTranslation(post, posts) },
