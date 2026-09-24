@@ -22,7 +22,7 @@ Docs is a collaborative document editor, an open alternative to Google Docs and 
 
 That's the part of the analogy that holds up under pressure. Arte's real innovation in 1990 wasn't "quality television" — it was the decision that neither France nor Germany would produce a national answer to the other's programming. They pooled the effort into a single jointly governed structure instead. Thirty-four years later, DINUM and ZenDiS made the same call about a document editor: rather than France shipping a sovereign Google Docs alternative and Germany shipping its own, they're building one codebase together. That's the pattern worth naming, and it's rarer than it should be in public-sector software, where duplicated national procurement is closer to the default.
 
-A colleague pointed out a second layer after reading this. Arte's mission was never just to broadcast culture; it was to make room for creation and for formats commercial television had no reason to carry, like short films and long-form documentaries. Its lower audience share follows from that mission, not in spite of it. Docs does something structurally similar for documents. Proprietary file formats are commercial products: each one ties your writing to the vendor that defines it. Building an editor on an open format is a way out of that, much as Arte stepped outside a programming grid set by advertising revenue.
+Lucie Termignon, pointed out a second layer after reading this. Arte's mission was never just to broadcast culture; it was to make room for creation and for formats commercial television had no reason to carry, like short films and long-form documentaries. Its lower audience share follows from that mission, not in spite of it. Docs does something structurally similar for documents. Proprietary file formats are commercial products: each one ties your writing to the vendor that defines it. Building an editor on an open format is a way out of that, much as Arte stepped outside a programming grid set by advertising revenue.
 
 ## The same move, thirty-five years apart
 
@@ -40,7 +40,7 @@ Macron:
 
 Different decade, same shape: two heads of state deciding in public that pooling beats duplicating. Arte was that decision applied to a television channel — as far as I can tell, the first time two states built one together. Docs may be the same decision applied to software: possibly the first time two states have built a piece of software together, rather than each running its own procurement for the same thing.
 
-You might think "he's stretching it," but that very day Docs made it to the stage as a concrete example of how states can cooperate with the open source community to build shared alternatives instead of national ones. The video below was shown on main stage.
+You might think "he's stretching it," but that very day Docs made it to the stage as a concrete example of how states can cooperate with the open source community to build shared alternatives instead of national ones. The video below was shown to the entire audience.
 
 <video controls width="100%" src="https://docs.numerique.gouv.fr/media/ad707f88-875d-4fd6-9d62-2d6774a5e44a/attachments/4ec2bb55-7f08-47dd-b943-979ce21d4157.mp4"></video>
 
