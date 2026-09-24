@@ -1,5 +1,5 @@
 ---
-title: Docs est au logiciel ce qu'Arte est aux médias — à trois exceptions près
+title: LaSuite Docs est au logiciel ce qu'Arte est aux médias — à trois exceptions près
 date: 2026-08-27
 description: Docs et Arte partagent un mécanisme, pas seulement un drapeau — et ce sont les écarts qui racontent la vraie histoire.
 author: Virgile Deville

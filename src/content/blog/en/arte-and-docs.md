@@ -1,5 +1,5 @@
 ---
-title: Docs is to software what Arte is to media — with three exceptions
+title: LaSuite Docs is to software what Arte is to media — with three exceptions
 date: 2026-08-27
 description: Docs and Arte share a mechanism, not just a flag — and the gaps are the real story.
 author: Virgile Deville
