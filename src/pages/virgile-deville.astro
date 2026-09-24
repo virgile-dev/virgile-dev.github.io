@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LangSwitch from '../components/LangSwitch.astro';
 
 const coached = [
   {
@@ -23,12 +24,15 @@ const coached = [
     desc: 'Lightweight computer-vision model for early wildfire detection.',
   },
 ];
+
+const alternates = { en: '/virgile-deville', fr: '/fr/virgile-deville' };
 ---
 
-<Layout>
+<Layout lang="en" alternates={alternates}>
   <div class="wrap">
     <nav class="topnav">
       <a href="/">Blog →</a>
+      <LangSwitch lang="en" targets={alternates} />
     </nav>
 
     <header class="hero">

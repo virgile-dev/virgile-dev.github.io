@@ -1,0 +1,26 @@
+---
+import { languages, localizePath, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  /** Where each language's link points; defaults to that language's home page. */
+  targets?: Partial<Record<Lang, string>>;
+}
+
+const { lang, targets = {} } = Astro.props;
+const langs = Object.keys(languages) as Lang[];
+---
+
+<span class="lang-switch">
+  {
+    langs.map((l) =>
+      l === lang ? (
+        <span class="current" aria-current="true">{l.toUpperCase()}</span>
+      ) : (
+        <a href={targets[l] ?? localizePath(l, '/')} hreflang={l} lang={l} title={languages[l]}>
+          {l.toUpperCase()}
+        </a>
+      )
+    )
+  }
+</span>

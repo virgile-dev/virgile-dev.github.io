@@ -8,6 +8,9 @@ const blog = defineCollection({
     date: z.coerce.date(),
     description: z.string(),
     draft: z.boolean().optional(),
+    // Optional URL slug, e.g. a French slug for a French translation.
+    // (Not `slug`: the glob loader would use it as the entry id and drop the lang folder.)
+    urlSlug: z.string().optional(),
   }),
 });
 

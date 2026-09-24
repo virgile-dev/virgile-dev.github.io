@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LangSwitch from './LangSwitch.astro';
+import { render, type CollectionEntry } from 'astro:content';
+import { t, formatDate, localizePath, otherLang, postLang, postUrl, type Lang } from '../i18n/ui';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  translation?: CollectionEntry<'blog'>;
+}
+
+const { post, translation } = Astro.props;
+const lang: Lang = postLang(post);
+const { Content } = await render(post);
+
+const alternates: Partial<Record<Lang, string>> = { [lang]: postUrl(post) };
+if (translation) alternates[otherLang(lang)] = postUrl(translation);
+---
+
+<Layout
+  title={`${post.data.title} — oss.pm`}
+  description={post.data.description}
+  lang={lang}
+  alternates={alternates}
+>
+  <div class="wrap">
+    <nav class="topnav">
+      <a href={localizePath(lang, '/')}>{t(lang, 'nav.blog')}</a>
+      <LangSwitch lang={lang} targets={alternates} />
+    </nav>
+
+    <header class="page-header">
+      <h1>{post.data.title}</h1>
+      <time class="card-date" datetime={post.data.date.toISOString()}>
+        {formatDate(lang, post.data.date)}
+      </time>
+      {
+        translation && (
+          <a class="translation-link" href={postUrl(translation)} hreflang={otherLang(lang)}>
+            {t(lang, 'post.readIn')}
+          </a>
+        )
+      }
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+</Layout>

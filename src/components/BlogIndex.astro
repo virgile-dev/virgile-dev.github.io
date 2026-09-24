@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LangSwitch from './LangSwitch.astro';
+import { getCollection } from 'astro:content';
+import { t, formatDate, localizePath, postLang, postUrl, findTranslation, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+// Posts in this language, plus posts from the other language that haven't been translated yet.
+const posts = allPosts
+  .filter((post) => postLang(post) === lang || !findTranslation(post, allPosts))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const alternates = { en: '/', fr: '/fr/' };
+---
+
+<Layout title="oss.pm" lang={lang} description={t(lang, 'index.description')} alternates={alternates}>
+  <div class="wrap">
+    <nav class="topnav">
+      <a href={localizePath(lang, '/virgile-deville')}>{t(lang, 'nav.about')}</a>
+      <LangSwitch lang={lang} />
+    </nav>
+
+    <header class="page-header">
+      <h1 class="oss-logo">OSS.PM</h1>
+      <p class="tagline">{t(lang, 'index.tagline')}</p>
+    </header>
+
+    <div class="card-list">
+      {
+        posts.map((post) => (
+          <a class="card" href={postUrl(post)} hreflang={postLang(post)}>
+            <div class="card-title" lang={postLang(post)}>
+              {post.data.title}
+              {postLang(post) !== lang && <span class="lang-tag">{postLang(post).toUpperCase()}</span>}
+            </div>
+            <p class="card-desc" lang={postLang(post)}>{post.data.description}</p>
+            <time class="card-date" datetime={post.data.date.toISOString()}>
+              {formatDate(lang, post.data.date)}
+            </time>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
