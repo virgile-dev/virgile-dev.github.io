@@ -1,28 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LangSwitch from './LangSwitch.astro';
-import { getCollection } from 'astro:content';
-import { t, formatDate, localizePath, postLang, postUrl, findTranslation, type Lang } from '../i18n/ui';
+import { t, formatDate, localizePath, postLang, postUrl, type Lang } from '../i18n/ui';
+import { SITE_NAME, authorJsonLd, getPublishedPosts, listedPosts } from '../site';
 
 interface Props {
   lang: Lang;
 }
 
 const { lang } = Astro.props;
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-
-// Posts in this language, plus posts from the other language that haven't been translated yet.
-const posts = allPosts
-  .filter((post) => postLang(post) === lang || !findTranslation(post, allPosts))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const posts = listedPosts(lang, await getPublishedPosts());
 
 const alternates = { en: '/', fr: '/fr/' };
+const site = Astro.site!;
+const jsonLd = {
+  '@type': 'Blog',
+  name: SITE_NAME,
+  url: new URL(localizePath(lang, '/'), site).href,
+  description: t(lang, 'index.description'),
+  inLanguage: lang,
+  author: authorJsonLd(site, lang),
+  blogPost: posts.map((post) => ({
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    url: new URL(postUrl(post), site).href,
+    datePublished: post.data.date.toISOString(),
+    inLanguage: postLang(post),
+  })),
+};
 ---
 
-<Layout title="oss.pm" lang={lang} description={t(lang, 'index.description')} alternates={alternates}>
+<Layout title="oss.pm" lang={lang} description={t(lang, 'index.description')} alternates={alternates} jsonLd={jsonLd}>
   <div class="wrap">
     <nav class="topnav">
-      <a href={localizePath(lang, '/virgile-deville')}>{t(lang, 'nav.about')}</a>
+      <a href={localizePath(lang, '/virgile-deville/')}>{t(lang, 'nav.about')}</a>
       <LangSwitch lang={lang} />
     </nav>
 

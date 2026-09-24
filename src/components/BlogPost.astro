@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import LangSwitch from './LangSwitch.astro';
 import { render, type CollectionEntry } from 'astro:content';
 import { t, formatDate, localizePath, otherLang, postLang, postUrl, type Lang } from '../i18n/ui';
+import { SITE_NAME, OG_IMAGE, authorJsonLd } from '../site';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -15,6 +16,22 @@ const { Content } = await render(post);
 
 const alternates: Partial<Record<Lang, string>> = { [lang]: postUrl(post) };
 if (translation) alternates[otherLang(lang)] = postUrl(translation);
+
+const site = Astro.site!;
+const url = new URL(postUrl(post), site).href;
+const jsonLd = {
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  inLanguage: lang,
+  url,
+  mainEntityOfPage: url,
+  image: new URL(OG_IMAGE, site).href,
+  author: authorJsonLd(site, lang),
+  publisher: { '@id': authorJsonLd(site, lang)['@id'] },
+  isPartOf: { '@type': 'Blog', name: SITE_NAME, url: new URL(localizePath(lang, '/'), site).href },
+};
 ---
 
 <Layout
@@ -22,6 +39,9 @@ if (translation) alternates[otherLang(lang)] = postUrl(translation);
   description={post.data.description}
   lang={lang}
   alternates={alternates}
+  type="article"
+  published={post.data.date}
+  jsonLd={jsonLd}
 >
   <div class="wrap">
     <nav class="topnav">
