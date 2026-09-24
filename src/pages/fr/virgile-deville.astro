@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { authorJsonLd } from '../../site';
 import LangSwitch from '../../components/LangSwitch.astro';
 
 const coached = [
@@ -25,10 +26,17 @@ const coached = [
   },
 ];
 
-const alternates = { en: '/virgile-deville', fr: '/fr/virgile-deville' };
+const alternates = { en: '/virgile-deville/', fr: '/fr/virgile-deville/' };
+const jsonLd = { '@type': 'ProfilePage', inLanguage: 'fr', mainEntity: authorJsonLd(Astro.site!, 'fr') };
 ---
 
-<Layout lang="fr" alternates={alternates}>
+<Layout
+  title="Virgile Deville — Senior Product Manager, logiciel libre"
+  lang="fr"
+  alternates={alternates}
+  type="profile"
+  jsonLd={jsonLd}
+>
   <div class="wrap">
     <nav class="topnav">
       <a href="/fr/">Blog →</a>
@@ -36,7 +44,18 @@ const alternates = { en: '/virgile-deville', fr: '/fr/virgile-deville' };
     </nav>
 
     <header class="hero">
-      <img class="portrait" src="/img/portrait.gif" alt="Virgile Deville" />
+      <video
+        class="portrait"
+        src="/img/portrait.mp4"
+        poster="/img/portrait.webp"
+        width="110"
+        height="110"
+        autoplay
+        muted
+        playsinline
+        disablepictureinpicture
+        aria-hidden="true"
+      ></video>
       <div>
         <h1>Virgile Deville</h1>
         <p class="title">Senior Product Manager — Open source &amp; communs numériques</p>
